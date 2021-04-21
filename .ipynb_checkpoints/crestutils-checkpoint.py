@@ -32,7 +32,7 @@ def crest_to_dataframe(crest_out):
         for line in ifile:
             if "total number unique points" in line:
                 unique_points=int(line.split()[7]) # get total number of structures 
-                rows=ifile.readlines()[1:unique_points]    #rows f the table
+                rows=ifile.readlines()[1:unique_points+1]    #rows f the table
 
                 for i,row in  enumerate(rows):  
                     if len(row.split())>6:     #isolate rows containing 'real conformers'
