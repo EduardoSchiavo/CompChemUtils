@@ -1,0 +1,28 @@
+E(HF):
+E(0)                                       ...   -566.328262965
+E(0)                                       ...   -566.328262965
+Ec(CCSD):
+E(CORR)(corrected)                         ...     -2.036477600
+Ec(T)
+Triples Correction (T)                     ...     -0.069223601
+Etot
+E(CCSD(T))                                 ...   -568.433964166
+
+------------------------------------------------- 
+FINAL SUMMARY DLPNO-CCSD ENERGY DECOMPOSITION (Eh)
+------------------------------------------------- 
+ 
+Intrafragment REF. energy:                   
+Intra fragment   1 (REF.)              -332.278246591     
+Intra fragment   2 (REF.)              -234.029851809     
+
+Interaction of fragments  2 and  1:  
+Electrostatics (REF.)                  -0.013986593 
+Exchange (REF.)                        -0.006177972 
+Dispersion (strong pairs)              -0.006015390 
+Dispersion (weak pairs)                -0.001029143 
+
+Sum of non dispersive correlation terms: 
+Non dispersion (strong pairs)          -2.027819314  
+Non dispersion (weak pairs)            -0.001613752  
+

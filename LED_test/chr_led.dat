@@ -1,0 +1,10 @@
+E(HF):
+E(0)                                       ...   -234.040524032
+E(0)                                       ...   -234.040524032
+Ec(CCSD):
+E(CORR)(corrected)                         ...     -0.931130238
+Ec(T)
+Triples Correction (T)                     ...     -0.027920637
+Etot
+E(CCSD(T))                                 ...   -234.999574907
+
