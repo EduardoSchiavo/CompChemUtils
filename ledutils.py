@@ -325,7 +325,12 @@ class Parser():
 #STANDALONE FUNCTIONS
 #
 #Computes the LED Deltas from Struct Objects and returns the components as a dict
-def compute_led_components(dimer, frag1, frag2):
+def compute_led_components(dimer, frag1, frag2, name=None, as_column=False):
+    #dimer, frag1, frag2: Struct Objects containing the LED data for the dimer and the two fragments
+    #
+    #as_column: bool (optional), print dataframe as column or row. default==False
+    #
+    #name: string, Name to be assigned as index in the Dataframe
     
     deltaTot=dimer.tot-frag1.tot-frag2.tot
     deltaTriples=dimer.triples-frag1.triples-frag2.triples
@@ -336,7 +341,7 @@ def compute_led_components(dimer, frag1, frag2):
     exch=dimer.exch
     disp=dimer.disp
     nonDisp=dimer.non_disp-frag1.ccsd-frag2.ccsd
-    
+    #Create Dictionary
     ledDict={r'$\Delta$E(CCSD(T))':deltaTot,\
             r'$\Delta$E(T)':deltaTriples,\
             r'$\Delta$E(el-prep)':elPrepTot,\
@@ -344,11 +349,19 @@ def compute_led_components(dimer, frag1, frag2):
             'Eexch':exch,\
             'Edisp':disp,\
             r'$\Delta$E(non-disp)':nonDisp}
-    
-    ledDataFrame=pd.DataFrame.from_dict(ledDict, orient='index')
-    
-    #Check if LED adds up
-    isok=math.isclose(ledDataFrame.iloc[1:,0].sum(), ledDataFrame.iloc[0,0], abs_tol=1e-04)
+   
+    #Create DataFrame
+    if as_column==True:
+        ledDataFrame=pd.DataFrame.from_dict(ledDict, orient='index')
+        #Check if LED adds up
+        isok=math.isclose(ledDataFrame.iloc[1:,0].sum(), ledDataFrame.iloc[0,0], abs_tol=1e-04)
+    else:
+        ledDataFrame=pd.DataFrame(ledDict, index=[name])
+        #Check if LED adds up
+        isok=math.isclose(ledDataFrame.iloc[0,1:].sum(), ledDataFrame.iloc[0,0], abs_tol=1e-04)
+
+ 
+    #Print Warning if LED does not add up
     if isok==False:
         print('WARNING: the sum of the LED components does not match the total DeltaE')
     else:
@@ -356,4 +369,3 @@ def compute_led_components(dimer, frag1, frag2):
     
     return ledDataFrame
     
-
