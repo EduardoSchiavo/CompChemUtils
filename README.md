@@ -15,3 +15,13 @@ frag1=led.Parser.struct_from_led('led_outs/frag_1.dat')
 frag2=led.Parser.struct_from_led('led_outs/frag_2.dat')`
 4) compute led and get pandas dataframe:
 ` led_df=led.compute_led_components(dimer, frag1, frag2, name='sys_name')`
+
+## CRESTUTILS
+
+To be added
+
+## OTHER SCRIPTS
+
+fragmentator.py - separates cluster in fragments (molecules) from pdb file
+
+hfld_heatmap.py - creates a heatmap from an HFLD output
