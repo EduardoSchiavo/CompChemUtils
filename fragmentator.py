@@ -142,6 +142,6 @@ with open('fragmented_orca.inp', 'w') as ofile:
     ofile.write('! input line \n\n\n')
     ofile.write('*xyz 0 1 \n')
     for atom in atomList:
-        formattedFrag=int(atom[5][-1])+1
+        formattedFrag=int(atom[5][4:])+1
         ofile.write(atom[1]+ ' '+ ' (' +str(formattedFrag)+ ') ' +atom[2]+ ' ' +atom[3]+ ' ' +atom[4]+'\n')
     ofile.write('*')
