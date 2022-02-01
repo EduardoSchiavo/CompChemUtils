@@ -36,6 +36,7 @@ ifile=sys.argv[1]
 
 #parameters
 molSize=int(sys.argv[2])
+fragNum=int(sys.argv[3])
 
 
 #            #
@@ -130,7 +131,7 @@ def assign_frags(atomList, fragments):
 # 
 
 connectivity, atomList=pdb_parse(l,l2)
-fragments=fragmentation(connectivity, 34, 14)
+fragments=fragmentation(connectivity, molSize, fragNum)
 atomList=assign_frags(atomList, fragments)
 
 #
