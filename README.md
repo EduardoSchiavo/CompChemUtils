@@ -25,3 +25,6 @@ To be added
 fragmentator.py - separates cluster in fragments (molecules) from pdb file
 
 hfld_heatmap.py - creates a heatmap from an HFLD output
+
+geom_splitter.py - Taking as an input the geometries from a rigid scan done with %params
+                    Outputs an ORCA input for each geometry in the geoms.txt file
