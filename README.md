@@ -36,7 +36,7 @@ Check here for crest documentation: https://xtb-docs.readthedocs.io/en/latest/cr
 
 `add_shifted_energies(dataframe)` adds one column with energies shifted w.r.t the lowest one and converted to kJ/mol
 
-The standalone `crest_splitter.py` splits the geometries from a crest output into separate files
+The standalone [crest_splitter.py`](crest_splitter.py) splits the geometries from a crest output into separate files
 
 
 ## HFLD UTILITIES
