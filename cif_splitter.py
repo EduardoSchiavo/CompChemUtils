@@ -12,7 +12,7 @@ with open(to_split, 'r') as ifile:
         if  '_database_code_depnum_ccdc_archive' in line:
             print(line.split()[1] +' ' + line.split()[2])
 
-            with open("strucuture_ccdc_{0}".format(line.split()[2]), 'w') as ofile:
+            with open("strucuture_ccdc_{0}".format(line.split()[2].replace("'", ".cif")), 'w') as ofile:
                 ofile.write('data_ \n')
                 stop=False
                 while stop==False:
