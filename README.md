@@ -20,11 +20,15 @@ frag2=led.Parser.struct_from_led('led_outs/frag_2.dat')`
 
 To be added
 
-## OTHER SCRIPTS
+## HFLD UTILITIES
 
 fragmentator.py - separates cluster in fragments (molecules) from pdb file
 
 hfld_heatmap.py - creates a heatmap from an HFLD output
 
+## MISC
+
 geom_splitter.py - Taking as an input the geometries from a rigid scan done with %params
                     Outputs an ORCA input for each geometry in the geoms.txt file
+
+cif_splitter.py - Splits a cif file containing multiple structures into separate cif files for each structure
