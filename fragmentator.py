@@ -35,8 +35,7 @@ from time import sleep
 ifile=sys.argv[1]
 
 #parameters
-molSize=sys.argv[2]
-fragNum=sys.argv[3]
+molSize=int(sys.argv[2])
 
 
 #            #
