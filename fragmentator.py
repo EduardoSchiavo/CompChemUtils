@@ -23,7 +23,6 @@
 #imports
 import sys
 import math
-from tqdm import tqdm
 from time import sleep
 
 
