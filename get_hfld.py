@@ -60,7 +60,7 @@ if __name__ == '__main__':
     # #match reference energies
     intra_matches=get_matches(hfld_string, r'(Intra\sfragment)\s+(\d{1,2})\s(\(REF\.\))\s+([-]?\d+\.\d{9})')
     #match LED decomposition of fragments
-    led_matches=get_matches(hfld_string, r'(\w+\s\(.*\.?\)\s+)([-]?\d\.\d{9})')
+    led_matches=get_matches(hfld_string, r'\n(\w+\s\(.*\.?\)\s+)([-]?\d\.\d{9})')
     #match dimer indexes e.g. Interaction of fragments 17 and 12:
     dim_matches=get_matches(hfld_string, r'Interaction of fragments\s{1,2}(\d{1,2})\sand\s{1,2}(\d{1,2})' )
     #convert to list of tuples of indices
