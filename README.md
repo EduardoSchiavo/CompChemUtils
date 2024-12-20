@@ -1,4 +1,4 @@
-# utilities
+# CompChemUtils
 Scripts for input preparation and output postprocessing
 
 **DISCLAMER:** The modules and utilities presented in this repository are used to interact with the input or output of different computational chemistry programs and are **NOT** part of the official releases of **ANY** of those programs. These are just scripts I worte and use to speed-up my workflow. Feel free to use and or modify the scripts, but for anything related to the programs they refer to, check official documentation. 
